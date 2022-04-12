@@ -20,7 +20,7 @@ function NavBar(){
                     </Link>
                 </li>
                 <li>
-                    <Link href={'/products'} prefetch={ true }>
+                    <Link href={'/products'} >
                         <a>
                             products
                         </a>

@@ -4,4 +4,4 @@ const Container = styled.section`
     background-color: aliceblue;
 `
 
-export { Container }
+export default Container
