@@ -2,19 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { ListOfProducts } from '@components/ListOfProducts'
 
-function Products(){
+export  const getStaticProps = async() => {
+    const res = await fetch('https://store-avocado.vercel.app/api/v1/avo')
+    const data = await res.json()
+  
+    return {
+        props:{
+            products: data
+        }
+    }
+}
+
+function Products({products}:IProps){
 
     const router = useRouter()
-
-    const [products, setProducts] = useState<TProduct[]>([])
-
-    useEffect(()=>{
-        window.fetch('/api/v1/avo')
-            .then((response )=> response.json())
-            .then((data)=> {
-                setProducts(data)
-            })
-    },[])
 
     const handleDetail = (id:TProductId) => {
         router.push(`/products/${id}`)
@@ -30,5 +31,10 @@ function Products(){
         </div>
     )
 }
+
+interface IProps{
+    products: TProduct[]
+}
+
 
 export default Products
