@@ -1,0 +1,13 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/nextjs,now
+# Edit at https://www.toptal.com/developers/gitignore?templates=nextjs,now
+
+### NextJS ###
+# Next build dir
+.next/
+
+### now ###
+.now
+.vercel
+
+# End of https://www.toptal.com/developers/gitignore/api/nextjs,now
