@@ -1,8 +1,6 @@
-import Image from 'next/image';
 import React from 'react';
 import { Li } from './Link';
 import { Nav, Ul } from './styles';
-import logo from '../../img/avocado.jpg'
 
 
 function NavBar(){

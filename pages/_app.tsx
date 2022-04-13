@@ -2,6 +2,11 @@ import {AppProps} from 'next/app'
 import { Layout } from '@components/Layout'
 import '../css/global.css'
 
+
+// export const reportWebVitals = (metric) =>{
+//     console.log(metric)
+// }
+
 function MyApp({ Component, pageProps }:AppProps) {
     return(
         <Layout>
