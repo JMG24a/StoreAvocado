@@ -1,28 +1,25 @@
 import React from 'react';
-import { Container } from './styles'
+import { Container, Grid, CardDescription, Price, Sku} from './styles'
 
 function ListOfProducts({products, handleDetail}:IProps){
     return (
-        <>
+        <Grid>
             {Object.keys(products).map((item:TProductId) => (
                 <Container 
                     key={item}
                     onClick={() => handleDetail(item)}
                 >
                     <div>
-                        <p>{products[item as any].name}</p>
-                    </div>
-
-                    <div>
                         <p>{products[item as any].image}</p>
                     </div>
                     
-                    <div>
-                        <p>{products[item as any].price}</p>
-                    </div>
+                    <CardDescription>
+                        <Price>{`Price: ${products[item as any].price}`}</Price>
+                        <Sku>{`${products[item as any].name}`}</Sku>
+                    </CardDescription>
                 </Container>
             ))}
-        </>
+        </Grid>
     )
 }
 
