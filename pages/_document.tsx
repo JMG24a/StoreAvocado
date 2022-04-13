@@ -1,5 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
+
+
 export default function Document() {
   return (
     <Html>
@@ -10,7 +12,7 @@ export default function Document() {
             {/**script */}
             {/**meta */}
         </Head>
-        <body>
+        <body className="body">
             <Main />
             <NextScript />
         </body>
